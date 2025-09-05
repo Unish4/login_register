@@ -43,7 +43,7 @@
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="bg-white p-6 rounded-lg shadow">
-          <h3 class="text-lg font-semibold">Balance</h3>
+          <h3 class="text-lg font-semibold">Rokda</h3>
           <p class="text-2xl font-bold text-green-600 mt-2">Npr 100,500</p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow">
