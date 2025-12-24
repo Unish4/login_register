@@ -22,7 +22,7 @@
         <a href="#" class="hover:text-blue-600">Contact</a>
       </div>
       <!-- Button -->
-      <a href="index.php"
+      <a href="login_page.php"
         class="bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
         Login
       </a>
@@ -104,7 +104,7 @@
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-6">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-      <p>&copy; 2025 MyProject. All rights reserved.</p>
+      <p>&copy; 2025 HamroBank. All rights reserved.</p>
       <div class="space-x-4 mt-4 md:mt-0">
         <a href="#" class="hover:text-white">Privacy</a>
         <a href="#" class="hover:text-white">Terms</a>

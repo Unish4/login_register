@@ -35,7 +35,7 @@ function isActiveForm($formName, $activeForm){
 
 <!-- LOGIN FORM -->
 <div class="form-box bg-white rounded-lg p-8 <?= isActiveForm('login',$activeForm); ?>" id="login-form">
-    <form action="login_register.php" method="post">
+    <form action="login_logic.php" method="post">
         <h2 class="text-black font-bold text-2xl flex justify-center items-center">Login</h2>
 
         <?= showError($errors['login']); ?>
@@ -62,7 +62,7 @@ function isActiveForm($formName, $activeForm){
 
 <!-- REGISTER FORM -->
 <div class="form-box bg-white rounded-lg p-8 <?= isActiveForm('register',$activeForm); ?>" id="register-form">
-    <form action="login_register.php" method="post">
+    <form action="login_logic.php" method="post">
         <h2 class="text-black font-bold text-2xl flex justify-center items-center">Register</h2>
 
         <?= showError($errors['register']); ?>
@@ -80,11 +80,7 @@ function isActiveForm($formName, $activeForm){
                 placeholder-gray-400 placeholder:text-sm placeholder:italic
                 focus:outline-none focus:ring-2 focus:ring-blue-500" />
 
-            <select name="role" class="w-full mb-4 px-7 py-2 border rounded-lg mt-4" required>
-                <option value="">--Select Role--</option>
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
-            </select>
+            <!-- Role is now fixed to 'user' in PHP; no need to select here -->
 
             <button class="bg-blue-600 mt-4 px-3 py-1 rounded-lg text-white hover:bg-blue-700" type="submit" name="register">Register</button>
         </div>

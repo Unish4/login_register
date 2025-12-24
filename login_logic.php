@@ -7,7 +7,9 @@ if(isset($_POST['register'])){
     $name = trim($_POST['name']);
     $email = strtolower(trim($_POST['email']));
     $password = $_POST['password']; // plain text
-    $role = $_POST['role'];
+
+    // All newly registered users are normal users
+    $role = 'user';
 
     // Check if email already exists
     $checkEmail = $conn->query("SELECT Email FROM users WHERE Email = '$email'");
@@ -19,7 +21,7 @@ if(isset($_POST['register'])){
         $_SESSION['active_form'] = 'login';
         $_SESSION['register_success'] = 'Registered successfully! Please login.';
     }
-    header("Location: index.php");
+    header("Location: login_page.php");
     exit();
 }
 
@@ -34,6 +36,8 @@ if(isset($_POST['login'])){
 
         // Plain text password check (case-sensitive)
         if($password === $user['Password']){
+            // Store user id and basic info in session
+            $_SESSION['user_id'] = $user['id'];
             $_SESSION['name'] = $user['Name'];
             $_SESSION['email'] = $user['Email'];
             $_SESSION['role'] = $user['Role'];
@@ -50,7 +54,7 @@ if(isset($_POST['login'])){
 
     $_SESSION['login_error'] = 'Incorrect email or password';
     $_SESSION['active_form'] = 'login';
-    header("Location: index.php");
+    header("Location: login_page.php");
     exit();
 }
 ?>
